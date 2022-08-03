@@ -33,10 +33,15 @@ function create(req, res){
 	// make a get request to /todos now
 }
 
+function deleteSkill(req, res){
+    //console.log(req.params, 'req.params')
+    res.redirect('/skills');
+}
 module.exports = {
 	// index: index,
 	index, // ^ what is actually happening
 	show,
 	new: newSkills,
-	create
+	create,
+    delete: deleteSkill,
 }
