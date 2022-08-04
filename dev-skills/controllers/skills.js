@@ -20,7 +20,7 @@ function show(req, res){
 }
 
 function newSkills(req, res){
-	res.render('skills/new.ejs')
+	res.render('skills/new.ejs');
 }
 
 function create(req, res){
@@ -35,7 +35,8 @@ function create(req, res){
 
 function deleteSkill(req, res){
     //console.log(req.params, 'req.params')
-    res.redirect('/skills');
+    Skill.deleteOne(req.params.id)
+	res.redirect('/skills');
 }
 module.exports = {
 	// index: index,
